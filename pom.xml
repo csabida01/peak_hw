@@ -14,13 +14,20 @@
   </properties>
 
   <dependencies>
-<!--SpringBoot support-->
+<!--SpringBoot test support-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <version>3.5.3</version>
       <scope>test</scope>
     </dependency>
+
+<!--      SpringBoot application-->
+      <dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter</artifactId>
+          <version>3.5.3</version>
+      </dependency>
 
 <!--JUnit 5-->
     <dependency>
