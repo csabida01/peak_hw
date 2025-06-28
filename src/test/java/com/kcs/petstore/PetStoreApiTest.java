@@ -1,16 +1,17 @@
 package com.kcs.petstore;
 
-import io.qameta.allure.restassured.AllureRestAssured;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import org.junit.jupiter.api.*;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import org.junit.jupiter.api.*;
+import io.restassured.RestAssured;
 import static io.restassured.RestAssured.given;
-import static java.util.concurrent.TimeUnit.SECONDS;
-import static java.util.concurrent.TimeUnit.MILLISECONDS;
+import io.restassured.http.ContentType;
+import io.qameta.allure.restassured.AllureRestAssured;
 import static org.hamcrest.Matchers.is;
 import static org.awaitility.Awaitility.await;
+
+import static java.util.concurrent.TimeUnit.SECONDS;
+import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 @SpringBootTest
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
