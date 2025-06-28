@@ -17,7 +17,7 @@ import static org.awaitility.Awaitility.await;
 public class PetStoreApiTest {
 
     private static final String BASE_URL = "https://petstore.swagger.io/v2";
-    private static long petId = 213456789;
+    private static final long petId = 213456789;
 
     @BeforeAll
     static void setup() {
@@ -35,16 +35,13 @@ public class PetStoreApiTest {
                             }
                 """.formatted(petId);
 
-        petId = given()
+        given()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .when()
                 .post("/pet")
                 .then()
-                .statusCode(200)
-                .extract()
-                .jsonPath()
-                .getLong("id");
+                .statusCode(200);
     }
 
     @Test
